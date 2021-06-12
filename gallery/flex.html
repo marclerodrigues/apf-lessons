@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    @keyframes crescer {
+      0% {
+        width: 10px;
+      }
+
+      20% {
+        width: 300px;
+      }
+
+      50% {
+        width: 150px;
+      }
+
+      100%{
+        width: 250px;
+      }
+    }
+
+    @keyframes roda {
+      from {
+        transform: rotate(90deg)
+      }
+
+      to {
+        transform: rotate(180deg)
+      }
+    }
+
+    .box {
+      width: 150px;
+      height: 150px;
+      animation-name: crescer;
+      animation-duration: 2s;
+      animation-iteration-count: 2;
+      /* animation-direction: alternate-reverse; */
+      /* animation-delay: 2s; */
+    }
+
+    /* .box:hover {
+      animation: roda 2s;
+    } */
+/* 
+    .box:hover {
+      width: 200px;
+      height: 200px;
+      transition: all 1s;
+      transition-timing-function: ease;
+    } */
+
+    .red {
+      background-color: red;
+    }
+
+    .blue {
+      background-color: blue;
+    }
+
+    .yellow {
+      background-color: yellow;
+    }
+
+    .container {
+      display: flex;
+      height: 100vh;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row-reverse;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="box red">
+      </div>
+
+      <div class="box blue">
+      </div>
+
+      <div class="box yellow">
+      </div>
+    </div>
+  </body>
+</html>

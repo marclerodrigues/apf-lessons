@@ -1,0 +1,152 @@
+:root {
+  --black: #000000;
+  --cyprus: #003142;
+  --white: #ffffff;
+  --half-baked: #86BFD3;
+  --silver: #BCBCBC;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.signin {
+  font-family: "Roboto";
+  background-image: url("./assets/Background.png");
+  background-size: cover;
+}
+
+.signin__header,
+.signin__form {
+  height: 65vh;
+}
+
+.signin__header {
+  background-image: url("./assets/mockup.png");
+  background-size: cover;
+  background-position: center;
+  background-color: var(--cyprus);
+  text-align: center;
+}
+
+.signin__title {
+  color: var(--white);
+  font-size: 32px;
+  padding-top: 40px;
+  font-weight: bold;
+}
+
+.signin__title--normal {
+  color: var(--black);
+}
+
+.signin__subtitle {
+  color: var(--half-baked);
+  margin-top: 10px;
+}
+
+.signin__form {
+  padding: 0 0 50px;
+  background-color: var(--white);
+}
+
+.signin__formgroup {
+  padding: 20px 35px;
+}
+
+.signin__title--normal,
+.signin__actions,
+.signin__formfield--checkbox {
+  padding-left: 35px;
+  padding-right: 35px;
+}
+
+.signin__formfield:not(.signin__formfield--checkbox) {
+  display: flex;
+  flex-direction: column;
+}
+
+.signin__label:not(.signin__label--checkbox) {
+  font-weight: bold;
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.signin__label--checkbox {
+  font-size: 18px;
+}
+
+.signin__field:not(.signin__field--checkbox) {
+  height: 50px;
+  border-radius: 5px;
+  border: 1px solid var(--silver);
+}
+
+.signin__field::placeholder {
+  color: var(--silver);
+  font-size: 16px;
+  padding: 15px;
+}
+
+.signin__field--checkbox {
+  margin-top: 20px;
+}
+
+.signin__actions {
+  margin-top: 20px;
+}
+
+.signin__button {
+  width: 100%;
+  height: 50px;
+  background-color: var(--cyprus);
+  border: none;
+  color: var(--white);
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.signin__terms {
+  color: var(--cyprus);
+  font-weight: bold;
+}
+
+@media only screen and (min-width: 768px) {
+  .signin {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .signin__header,
+  .signin__form {
+    width: 350px;
+    height: 40vh;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .signin {
+    flex-direction: initial;
+  }
+
+  .signin__header {
+    border-radius: 6px 0 0 6px;
+  }
+
+  .signin__form {
+    padding-bottom: 0;
+    border-radius: 0 6px 6px 0;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .signin__header,
+  .signin__form {
+    height: 60vh;
+  }
+}

@@ -4,11 +4,90 @@
     <title>APF - Meu Titulo de Págin</title>
 
     <link href="style.css" rel="stylesheet" />
+    <style>
+      p:first-child {
+        color: blue;
+      }
+
+      div > p {
+        color: red;
+      }
+
+      div + p {
+        color: blue;
+      }
+
+      span ~ p {
+        font-size: 50px;
+      }
+
+      [name] {
+        color: red;
+      }
+
+      [name="marcle"] {
+        color: black;
+      }
+
+      [name~="mar"] {
+        color: white;
+      }
+
+      [name|="m"] {
+        font-size: 20px;
+      }
+
+      [name$="le"] {
+        color: pink;
+      }
+
+      [name$="le"]::after {
+        content: 'Marcle';
+        color: red;
+      }
+
+      p:hover {
+        color: white;
+      }
+
+      p:nth-child(2) {
+        color: blue;
+      }
+    </style>
   </head>
 
+
   <body>
+    <div>
+      <p>
+        Meu Paragrafo
+      </p>
+
+      <p>
+        Meu Paragrafo 2
+      </p>
+
+    </div>
+
+    <div>
+      <p>
+        Programador
+      </p>
+      <span name="marc">
+        Marcle
+      </span>
+      <span name="mar">
+        Senior
+      </span>
+      <p>
+        Professor
+      </p>
+      <span name="marcle">
+        A Profissão
+      </span>
+    </div>
     <div class="galeria">
-      <div class="imagem">
+      <div id="meu-id" class="imagem" name="marcle">
         <span class="counter">
           1 / 4
         </span>

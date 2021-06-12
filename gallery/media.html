@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Aula 04 - APF</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .boxes {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+      }
+
+      .boxes__box--red {
+        background-color: red;
+      }
+
+      .boxes__box--blue {
+        background-color: blue;
+      }
+
+      .boxes__box--yellow {
+        background-color: yellow;
+      }
+
+      .boxes__box {
+        height: 30vh;
+        width: 100vw;
+      }
+
+      @media only screen and (min-width: 768px) {
+        .box {
+          width: 50vw;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- BEM -->
+
+    <div class="boxes">
+      <div class="boxes__box boxes__box--red">Ruby</div>
+
+      <div class="boxes__box boxes__box--blue">Python</div>
+
+      <div class="boxes__box boxes__box--yellow">JavaScript</div>
+    </div>
+  </body>
+</html>

@@ -31,9 +31,21 @@ header {
   border-radius: 100%;
 }
 
+#meu-id {
+
+}
+
 .active {
   opacity: 1;
   background-color: #717171;
+}
+
+.active.controls {
+
+}
+
+.active .controls {
+
 }
 
 .controls {
