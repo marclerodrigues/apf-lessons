@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>APF - Aula 7 - Eventos</title>
+
+    <link href="events2.css" rel="stylesheet" />
+    <script src="events2.js"></script>
+  </head>
+  <body>
+    <button class="select-size">Select Size 9</button>
+
+    <button class="select-type">Select Color Blue</button>
+
+    <button class="back">Back</button>
+
+    <button class="forward">Forward</button>
+
+
+    <button class="redirect">redirect</button>
+
+    <script>
+      // History API
+
+      const selectSize = document.querySelector(".select-size");
+      // /size-9
+      const selectType = document.querySelector(".select-type");
+      // /color-blue
+
+      const back = document.querySelector(".back");
+      const forward = document.querySelector(".forward");
+
+      const redirect = document.querySelector(".redirect");
+
+      redirect.onclick = () => {
+        window.location.href = "http://www.google.com.br"
+      }
+
+      back.onclick = (e) => { history.back() };
+
+      forward.onclick = (e) => { history.forward() };
+
+      selectSize.onclick = (e) => {
+        history.pushState("size", "Tênis Maior", "/size-9?color=blue")
+      };
+
+      selectType.onclick = (e) => {
+        history.pushState("type", "Tênis Diferente", "/color-blue?size=9")
+      };
+    </script>
+  </body>
+</html>
