@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>APF - Aula 8 - Workers</title>
+
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div>
+      Contagem:
+      <span name="counter"> 0 </span>
+      <button onclick="startWorker()">Iniciar Contagem</button>
+      <button onclick="stopWorker()">Parar Contagem</button>
+    </div>
+
+    <script>
+      let worker;
+
+      function startWorker() {
+        if (worker === undefined) {
+          worker = new Worker("worker.js");
+
+          worker.onmessage = (event) => {
+            const { data } = event;
+            const count = document.querySelector("span[name='counter']");
+
+            count.innerHTML = data;
+          };
+        }
+      }
+
+      function stopWorker() {
+        if (worker) {
+          worker.terminate();
+          worker = undefined;
+        }
+      }
+    </script>
+  </body>
+</html>
